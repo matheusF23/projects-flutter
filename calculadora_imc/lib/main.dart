@@ -53,16 +53,16 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
               child: Container(
-              height: 50.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Text(
-                  "Calcular",
-                  style: TextStyle(color: Colors.white, fontSize: 25.0),
+                height: 50.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Calcular",
+                    style: TextStyle(color: Colors.white, fontSize: 25.0),
+                  ),
+                  color: Colors.green,
                 ),
-                color: Colors.green,
               ),
-            ),
             ),
             Text(
               "Info",
