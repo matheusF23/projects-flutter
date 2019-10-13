@@ -1,4 +1,4 @@
-# conversor
+# Conversor de moedas
 
 Aplicativo para realizar a conversão de moeda entre Real, Dolar e Euro.
 
