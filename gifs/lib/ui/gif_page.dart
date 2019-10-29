@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class GifPage extends StatelessWidget {
 
+class GifPage extends StatelessWidget {
   final Map _gifData;
 
   GifPage(this._gifData);
