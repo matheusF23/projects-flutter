@@ -13,6 +13,9 @@ class ContactPage extends StatefulWidget {
 }
 
 class _ContactPageState extends State<ContactPage> {
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
   bool _userEdited = false;
   Contact _editedContact;
 
@@ -24,6 +27,10 @@ class _ContactPageState extends State<ContactPage> {
       _editedContact = Contact();
     } else {
       _editedContact = Contact.fromMap(widget.contact.toMap());
+      
+      _nameController.text = _editedContact.name;
+      _emailController.text = _editedContact.email;
+      _phoneController.text = _editedContact.phone;
     }
   }
 
@@ -58,6 +65,7 @@ class _ContactPageState extends State<ContactPage> {
               ),
             ),
             TextField(
+              controller: _nameController,
               decoration: InputDecoration(labelText: "Nome"),
               onChanged: (text) {
                 _userEdited = true;
@@ -67,6 +75,7 @@ class _ContactPageState extends State<ContactPage> {
               },
             ),
             TextField(
+              controller: _emailController,
               decoration: InputDecoration(labelText: "Email"),
               onChanged: (text) {
                 _userEdited = true;
@@ -75,6 +84,7 @@ class _ContactPageState extends State<ContactPage> {
               keyboardType: TextInputType.emailAddress,
             ),
             TextField(
+              controller: _phoneController,
               decoration: InputDecoration(labelText: "Phone"),
               onChanged: (text) {
                 _userEdited = true;
