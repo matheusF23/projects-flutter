@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() => runApp(new MyApp());
+void main() {
 
-class MyApp extends StatelessWidget {
+  Firestore.instance.collection("teste").document("teste").setData({"teste": "teste"});
+
+  runApp(MyAppp());
+}
+
+class MyAppp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
