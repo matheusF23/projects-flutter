@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
-  Firestore.instance
-      .collection("mensagens")
-      .document()
-      .collection("arqmidia")
-      .document()
-      .setData({"texto": "texto"});
+Future main() async {
+  Firestore.instance.collection("mensagens").snapshots().listen((snapshot){
+
+        for(DocumentSnapshot doc in snapshot.documents){
+          print(doc.data);
+        }
+        
+      });
 
   runApp(MyAppp());
 }
